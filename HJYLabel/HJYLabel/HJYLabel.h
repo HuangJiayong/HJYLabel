@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_OPTIONS(NSInteger, LabelTextAlignment) {
-    LabelTextAlignmentCenter             = 0,       //默认居中
-    LabelTextAlignmentTop                = 1 << 0,  //顶部
-    LabelTextAlignmentBotton             = 1 << 1,  //底部
-    LabelTextAlignmentLeft               = 1 << 2,  //左边
-    LabelTextAlignmentRight              = 1 << 3,  //右边
+    LabelTextAlignmentTop                = 1 << 0,  //居上
+    LabelTextAlignmentBotton             = 1 << 1,  //居下
+    LabelTextAlignmentLeft               = 1 << 2,  //居左
+    LabelTextAlignmentRight              = 1 << 3,  //居右
+    LabelTextAlignmentVerticalCenter     = 1 << 4,  //垂直居中
+    LabelTextAlignmentHorizontallyCenter = 1 << 5   //水平居中
 };
 
 @interface HJYLabel : UILabel
