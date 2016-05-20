@@ -15,6 +15,7 @@
 		E4FAB7551CEEF6BA004D4356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4FAB7531CEEF6BA004D4356 /* LaunchScreen.storyboard */; };
 		E4FAB7601CEEF6BA004D4356 /* HJYLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAB75F1CEEF6BA004D4356 /* HJYLabelTests.m */; };
 		E4FAB76B1CEEF6BA004D4356 /* HJYLabelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAB76A1CEEF6BA004D4356 /* HJYLabelUITests.m */; };
+		E4FAB77A1CEEFF1F004D4356 /* HJYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAB7791CEEFF1F004D4356 /* HJYLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		E4FAB7661CEEF6BA004D4356 /* HJYLabelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJYLabelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FAB76A1CEEF6BA004D4356 /* HJYLabelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJYLabelUITests.m; sourceTree = "<group>"; };
 		E4FAB76C1CEEF6BA004D4356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4FAB7781CEEFF1F004D4356 /* HJYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJYLabel.h; sourceTree = "<group>"; };
+		E4FAB7791CEEFF1F004D4356 /* HJYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJYLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				E4FAB7531CEEF6BA004D4356 /* LaunchScreen.storyboard */,
 				E4FAB7561CEEF6BA004D4356 /* Info.plist */,
 				E4FAB7451CEEF6B9004D4356 /* Supporting Files */,
+				E4FAB7781CEEFF1F004D4356 /* HJYLabel.h */,
+				E4FAB7791CEEFF1F004D4356 /* HJYLabel.m */,
 			);
 			path = HJYLabel;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FAB77A1CEEFF1F004D4356 /* HJYLabel.m in Sources */,
 				E4FAB74D1CEEF6BA004D4356 /* ViewController.m in Sources */,
 				E4FAB74A1CEEF6B9004D4356 /* AppDelegate.m in Sources */,
 				E4FAB7471CEEF6B9004D4356 /* main.m in Sources */,
