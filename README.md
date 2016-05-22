@@ -4,12 +4,10 @@
  * 把项目里面的`HJYLabel.h`和`HJYLabel.m`复制到你的项目中
  * `#import "HJYLabel.h"`
  * 其他设置和UILabel一样，但文字排版请使用`labelTextAlignment`这个属性
-例如：
+例如，让文字左上角对齐：
 ````
 label.labelTextAlignment = LabelTextAlignmentTop | LabelTextAlignmentLeft;
 ````
-让文字左上角对齐
-    
 使用错误会打印错误信息：
 ````
 label.labelTextAlignment = LabelTextAlignmentTop | LabelTextAlignmentBotton;
