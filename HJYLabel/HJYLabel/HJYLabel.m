@@ -18,11 +18,6 @@
     return self;
 }
 
-- (void)setLabelTextAlignment:(LabelTextAlignment)labelTextAlignment {
-    _labelTextAlignment = labelTextAlignment;
-    [self setNeedsDisplay];
-}
-
 - (CGRect)textRectForBounds:(CGRect)bounds limitedToNumberOfLines:(NSInteger)numberOfLines {
     CGRect textRect = [super textRectForBounds:bounds limitedToNumberOfLines:numberOfLines];
     
@@ -39,7 +34,7 @@
     }
     
     if (_labelTextAlignment & LabelTextAlignmentBotton) {
-        //居下    000010
+        //居下    
         if (_labelTextAlignment & LabelTextAlignmentTop) {
             NSLog(@"居上和居下不能同时使用");
         }
@@ -50,7 +45,7 @@
     }
     
     if (_labelTextAlignment & LabelTextAlignmentLeft) {
-        //居左    000100
+        //居左
         if (_labelTextAlignment & LabelTextAlignmentRight) {
             NSLog(@"居左和居右不能同时使用");
         }
@@ -61,7 +56,7 @@
     }
     
     if (_labelTextAlignment & LabelTextAlignmentRight) {
-        //居右    001000
+        //居右
         if (_labelTextAlignment & LabelTextAlignmentLeft) {
             NSLog(@"居左和居右不能同时使用");
         }
@@ -72,7 +67,7 @@
     }
     
     if (_labelTextAlignment & LabelTextAlignmentVerticalCenter) {
-        //垂直居中 010000
+        //垂直居中
         if (_labelTextAlignment & LabelTextAlignmentLeft) {
             NSLog(@"垂直居中和居左不能同时使用");
         }
@@ -83,7 +78,7 @@
     }
     
     if (_labelTextAlignment & LabelTextAlignmentHorizontallyCenter) {
-        //水平居中 100000
+        //水平居中
         if (_labelTextAlignment & LabelTextAlignmentTop) {
             NSLog(@"水平居中和居上不能同时使用");
         }
