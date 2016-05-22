@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HJYLabel.h"
 
 @interface ViewController ()
 
@@ -16,9 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSInteger a;
-    a = 2&1;
-    NSLog(@"%ld", (long)a);
+    HJYLabel *label = [[HJYLabel alloc] initWithFrame:CGRectMake(20, 50, 100, 200)];
+
+    label.text = @"Label";
+    label.labelTextAlignment = LabelTextAlignmentTop | LabelTextAlignmentBotton;
+    [self.view addSubview:label];
 }
 
 - (void)didReceiveMemoryWarning {

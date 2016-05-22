@@ -26,74 +26,42 @@
 - (CGRect)textRectForBounds:(CGRect)bounds limitedToNumberOfLines:(NSInteger)numberOfLines {
     CGRect textRect = [super textRectForBounds:bounds limitedToNumberOfLines:numberOfLines];
     
-    if ((_labelTextAlignment & 1) &&
-        !(_labelTextAlignment & 1 << 1) &&
-        !(_labelTextAlignment & 1 << 4)) {
-        //居上
+    
+    if (_labelTextAlignment & LabelTextAlignmentTop) {
+        //居上    000001
         textRect.origin.y = bounds.origin.y;
-    }else{
-        [self errorInVertical];
     }
     
-    if ((_labelTextAlignment & 1 << 1) &&
-        !(_labelTextAlignment & 1) &&
-        !(_labelTextAlignment & 1 << 4)) {
-        //居下
+    if (_labelTextAlignment & LabelTextAlignmentBotton) {
+        //居下    000010
         textRect.origin.y = bounds.origin.y + (bounds.size.height - textRect.size.height);
-    }else{
-        [self errorInVertical];
     }
     
-    if ((_labelTextAlignment & 1 << 2) &&
-        !(_labelTextAlignment & 1 << 3) &&
-        !(_labelTextAlignment & 1 << 5)) {
-        //居左
+    if (_labelTextAlignment & LabelTextAlignmentLeft) {
+        //居左    000100
         textRect.origin.x = bounds.origin.x;
-    }else{
-        [self errorInHorizontally];
     }
     
-    if ((_labelTextAlignment & 1 << 3) &&
-        !(_labelTextAlignment & 1 << 2) &&
-        !(_labelTextAlignment & 1 << 5)) {
-        //居右
+    if (_labelTextAlignment & LabelTextAlignmentRight) {
+        //居右    001000
         textRect.origin.x = bounds.origin.x + (bounds.size.width - textRect.size.width);
-    }else{
-        [self errorInHorizontally];
     }
     
-    if ((_labelTextAlignment & 1 << 4) &&
-        !(_labelTextAlignment & 1) &&
-        !(_labelTextAlignment & 1 << 1)) {
-        //垂直居中
+    if (_labelTextAlignment & LabelTextAlignmentVerticalCenter) {
+        //垂直居中 010000
         textRect.origin.y = bounds.origin.y + (bounds.size.height - textRect.size.height) / 2.0;
-    }else{
-        [self errorInVertical];
     }
     
-    if ((_labelTextAlignment & 1 << 5) &&
-        !(_labelTextAlignment & 1 << 2) &&
-        !(_labelTextAlignment & 1 << 3)) {
-        //水平居中
+    if (_labelTextAlignment & LabelTextAlignmentHorizontallyCenter) {
+        //水平居中 100000
         textRect.origin.x = bounds.origin.x + (bounds.size.width - textRect.size.width) / 2.0;
-    }else{
-        [self errorInHorizontally];
     }
-    
     return textRect;
 }
 
 - (void)drawTextInRect:(CGRect)rect {
     CGRect textRect = [self textRectForBounds:rect limitedToNumberOfLines:self.numberOfLines];
     [super drawTextInRect:textRect];
-}
-
-- (void)errorInVertical {
-    NSLog(@"垂直方向布局冲突");
-}
-
-- (void)errorInHorizontally {
-    NSLog(@"水平方向布局冲突");
 }
 
 @end
